@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/myheight"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/blue_theme"
+        android:text="检查更新"/>
+
+    <LinearLayout
+        android:id="@+id/dialog_version_layout_version"
+        android:layout_width="280dip"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:paddingTop="8dip">
+
+        <LinearLayout
+            android:id="@+id/dialog_version_layout_forceupdate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dip"
+            android:paddingTop="8dip">
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8dip"
+                android:src="@mipmap/dialog_tishi" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="我们将不再支持该版本,要继续使用,请下载使用最新版本"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更新提醒"
+                android:textColor="@color/txt_gray_dark"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/dialog_version_tv_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dip"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dialog_version_tv_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dip"
+            android:lineSpacingExtra="6dip"
+            android:textColor="#323232"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/dialog_version_layout_progress"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="280dip"
+            android:orientation="vertical"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:visibility="visible">
+
+            <com.wl.wllibrary.view.NumberProgressBar
+                android:id="@+id/dialog_progress_pb_progressbar"
+                style="@style/NumberProgressBar_Beauty_Red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dip"
+            android:orientation="horizontal"
+            android:paddingBottom="15dip"
+            android:paddingLeft="3dip"
+            android:paddingRight="3dip"
+            android:paddingTop="6dip">
+
+            <Button
+                android:id="@+id/dialog_version_btn_cancel"
+                android:layout_width="0dip"
+                android:layout_height="35dip"
+                android:layout_marginRight="3dip"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:text="退出"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"></LinearLayout>
+
+            <Button
+                android:id="@+id/dialog_version_btn_update"
+                android:layout_width="0dp"
+                android:layout_height="35dip"
+                android:layout_marginRight="3dip"
+                android:layout_weight="3"
+                android:background="@color/blue_theme"
+                android:text="更新"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

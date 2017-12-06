@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name = "title" format = "string" />
+    <attr name = "titleTxtColor" format = "color" />
+    <attr name="txtSize" format="dimension" />
+    <attr name="txtColor" format="color" />
+    <declare-styleable name="roundImageView">
+        <attr name="isStroke" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="NumberProgressBar">
+        <attr name="progress_num" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+        <attr name="progress_text_offset" format="dimension" />
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="NumberProgressBarStyle">
+        <attr name="numberProgressBarStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="TopBar">
+        <attr name="title"  />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="titleTxtColor" />
+        <attr name="leftTextColor" format="color" />
+        <attr name="leftSrc" format="reference|color" />
+        <attr name="centerSrc" format="reference|color" />
+        <attr name="leftText" format="string" />
+        <attr name="rightTextColor" format="color" />
+        <attr name="rightSrc" format="reference|color" />
+        <attr name="rightText" format="string" />
+        <attr name="layoutbg" format="reference|color"/>
+    </declare-styleable>
+    <declare-styleable name="RoundCornerTv">
+        <attr name="cornerRadius" format="dimension"></attr>
+    </declare-styleable>
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="minWidth" format="dimension" />
+        <attr name="maxWidth" format="dimension"/>
+        <attr name="minHeight" format="dimension" />
+        <attr name="maxHeight" format="dimension"/>
+        <attr name="indicatorName" format="string"/>
+        <attr name="indicatorColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="BottomTab">
+        <attr name="contentlayout" format="integer|reference"/>
+    </declare-styleable>
+    <attr name="item_count" format="integer"/>
+    <attr name="tv_width" format="integer"/>
+    <attr name="width_match" format="boolean"/>
+
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="item_count" />
+        <attr name="tv_width" />
+        <attr name="width_match" />
+    </declare-styleable>
+    <declare-styleable name="TagFlowLayout">
+        <attr name="auto_select_effect" format="boolean"/>
+        <attr name="max_select" format="integer"/>
+        <attr name="gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SearchEditText"  parent="Theme.AppCompat.Light.NoActionBar">
+        <attr name="txt" format="string"/>
+        <attr name="txtSize" />
+        <attr name="txtColor" />
+        <attr name="image" format="integer"/>
+        <attr name="imageSize" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="CapacityEditText"  parent="Theme.AppCompat.Light.NoActionBar">
+        <attr name="txtSize" />
+        <attr name="txtColor"/>
+        <attr name="maxSize" format="integer"/>
+    </declare-styleable>
+
+    <!-- xy坐标轴颜色 -->
+    <attr name="xylinecolor" format="color" />
+    <!-- xy坐标轴宽度 -->
+    <attr name="xylinewidth" format="dimension" />
+    <!-- xy坐标轴文字颜色 -->
+    <attr name="xytextcolor" format="color" />
+    <!-- xy坐标轴文字大小 -->
+    <attr name="xytextsize" format="dimension" />
+    <!-- 折线图中折线的颜色 -->
+    <attr name="linecolor" format="color" />
+    <!-- x轴各个坐标点水平间距 -->
+    <attr name="interval" format="dimension" />
+    <!-- 背景颜色 -->
+    <attr name="bgcolor" format="color" />
+    <!--是否在ACTION_UP时，根据速度进行自滑动，建议关闭，过于占用GPU-->
+    <attr name="isScroll" format="boolean" />
+    <declare-styleable name="chartView">
+        <attr name="xylinecolor" />
+        <attr name="xylinewidth" />
+        <attr name="xytextcolor" />
+        <attr name="xytextsize" />
+        <attr name="linecolor" />
+        <attr name="interval" />
+        <attr name="bgcolor" />
+        <attr name="isScroll" />
+    </declare-styleable>
+    <!--金额 样式  元大 角分小 $25.33-->
+    <declare-styleable name="MoneyView">
+        <!--金额-->
+        <attr name="money_text" format="string"/>
+        <!--金额颜色-->
+        <attr name="money_color" format="color"/>
+        <!--元大小-->
+        <attr name="yuan_size" format="dimension"/>
+        <!--分大小-->
+        <attr name="cent_size" format="dimension"/>
+        <!--前缀文本-->
+        <attr name="prefix_text" format="string"/>
+        <!--前缀大小-->
+        <attr name="prefix_size" format="dimension"/>
+        <!--前缀颜色-->
+        <attr name="prefix_color" format="color"/>
+        <!--前缀右边距-->
+        <attr name="prefix_padding" format="dimension"/>
+        <!--小数点左边距-->
+        <attr name="point_padding_left" format="dimension"/>
+        <!--小数点右边距-->
+        <attr name="point_padding_right" format="dimension"/>
+        <!--是否使用千分符-->
+        <attr name="grouping" format="boolean"/>
+        <attr name="jiacu" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="PwdTextView">
+        <attr name="psw_size" format="dimension" />
+        <attr name="psw_color" format="color" />
+        <attr name="psw_count" format="integer" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+</resources>
