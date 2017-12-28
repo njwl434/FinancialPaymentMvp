@@ -11,11 +11,16 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.wl.caiwushoukuan.R;
 import com.wl.caiwushoukuan.adapter.WorkAdapter;
+import com.wl.caiwushoukuan.bean.TestInfo;
 import com.wl.caiwushoukuan.ui.base.BaseActivity;
 import com.wl.wllibrary.view.TopBar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * @describe: 主页面
@@ -26,16 +31,13 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity {
 
+
     @Bind(R.id.topBar)
     TopBar topBar;
     @Bind(R.id.tv_number_work)
     TextView tvNumberWork;
     @Bind(R.id.tv_client_work)
     TextView tvClientWork;
-    @Bind(R.id.tv_order_work)
-    TextView tvOrderWork;
-    @Bind(R.id.tv_warehouse_work)
-    TextView tvWarehouseWork;
     @Bind(R.id.tv_finance_work)
     TextView tvFinanceWork;
     @Bind(R.id.tv_other_work)
@@ -45,11 +47,14 @@ public class MainActivity extends BaseActivity {
     @Bind(R.id.swipeLayout)
     SwipeRefreshLayout swipeLayout;
     WorkAdapter workAdapter;
+    List<TestInfo> list = new ArrayList<>();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        getData();
         GridLayoutManager layoutManage = new GridLayoutManager(this, 2);
         rvContentWork.setLayoutManager(layoutManage);
         workAdapter = new WorkAdapter();
@@ -60,5 +65,40 @@ public class MainActivity extends BaseActivity {
 
             }
         });
+        getData();
+        workAdapter.setNewData(list);
+    }
+
+    /**
+     *
+     */
+    private void getData() {
+        TestInfo in = new TestInfo();
+        in.setName("我的客户");
+        in.setImg(R.mipmap.myclient);
+        list.add(in);
+        TestInfo in1 = new TestInfo();
+        in1.setName("添加客户");
+        in1.setImg(R.mipmap.myclient);
+        list.add(in);
+    }
+
+    @OnClick({R.id.tv_number_work, R.id.tv_client_work, R.id.tv_finance_work, R.id.tv_other_work})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.tv_number_work:
+                break;
+            //客户
+            case R.id.tv_client_work:
+
+                break;
+            //订单
+            case R.id.tv_finance_work:
+                break;
+            //其他
+            case R.id.tv_other_work:
+                break;
+            default:
+        }
     }
 }

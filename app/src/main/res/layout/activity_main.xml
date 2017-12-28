@@ -86,31 +86,7 @@
                 android:gravity="center"
                 android:text="     客户"
                 android:textColor="@color/white"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/tv_order_work"
-                android:layout_width="100dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="-35dp"
-                android:layout_marginTop="17dp"
-                android:background="@drawable/shape_half_circle_right_light"
-                android:gravity="center"
-                android:text="     工单"
-                android:textColor="@color/colorPrimary"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/tv_warehouse_work"
-                android:layout_width="100dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="-35dp"
-                android:layout_marginTop="17dp"
-                android:background="@drawable/shape_half_circle_right_light"
-                android:gravity="center"
-                android:text="     库房"
-                android:textColor="@color/colorPrimary"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
             <TextView
                 android:id="@+id/tv_finance_work"
@@ -120,9 +96,9 @@
                 android:layout_marginTop="17dp"
                 android:background="@drawable/shape_half_circle_right_light"
                 android:gravity="center"
-                android:text="     财务"
+                android:text="     订单"
                 android:textColor="@color/colorPrimary"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
             <TextView
                 android:id="@+id/tv_other_work"
@@ -134,7 +110,7 @@
                 android:gravity="center"
                 android:text="     其他"
                 android:textColor="@color/colorPrimary"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
 
         </LinearLayout>
