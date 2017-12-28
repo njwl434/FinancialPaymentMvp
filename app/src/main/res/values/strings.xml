@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Caiwushoukuan</string>
+    <string name="need_permission">您需要开启权限,并重启应用</string>
 </resources>

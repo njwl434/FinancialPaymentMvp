@@ -27,4 +27,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile project(':mylibrary')
+    compile('com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30') {
+        exclude group: 'com.android.support'
+    }
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.jakewharton:butterknife:7.0.0'
 }

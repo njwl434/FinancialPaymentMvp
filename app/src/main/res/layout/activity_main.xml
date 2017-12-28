@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <com.wl.wllibrary.view.TopBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="工作" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp">
+
+        <ImageView
+            android:layout_width="308dp"
+            android:layout_height="43dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="33dp"
+            android:layout_marginTop="9dp"
+            android:src="@mipmap/balls" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="我们用净水滋养了"
+                android:textColor="#0F4A8B"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_number_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0000"
+                android:textSize="17sp"
+                android:textColor="#4CAAED" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="人"
+                android:textColor="#0F4A8B"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.006"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.119">
+
+            <TextView
+                android:id="@+id/tv_client_work"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="-35dp"
+                android:background="@drawable/shape_half_circle_right"
+                android:gravity="center"
+                android:text="     客户"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_order_work"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="-35dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/shape_half_circle_right_light"
+                android:gravity="center"
+                android:text="     工单"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_warehouse_work"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="-35dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/shape_half_circle_right_light"
+                android:gravity="center"
+                android:text="     库房"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_finance_work"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="-35dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/shape_half_circle_right_light"
+                android:gravity="center"
+                android:text="     财务"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_other_work"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="-35dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/shape_half_circle_right_light"
+                android:gravity="center"
+                android:text="     其他"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeLayout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="32dp"
+            android:paddingBottom="40dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_content_work"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+</LinearLayout>
