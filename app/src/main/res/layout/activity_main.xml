@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="我们用净水滋养了"
+                android:text="一款用于记账的软件"
                 android:textColor="#0F4A8B"
                 android:textSize="17sp" />
 
@@ -44,7 +44,9 @@
                 android:layout_gravity="center"
                 android:text="0000"
                 android:textSize="17sp"
-                android:textColor="#4CAAED" />
+                android:textColor="#4CAAED"
+                android:visibility="gone"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -52,7 +54,9 @@
                 android:layout_gravity="center"
                 android:text="人"
                 android:textColor="#0F4A8B"
-                android:textSize="17sp" />
+                android:textSize="17sp"
+                android:visibility="gone"
+                />
         </LinearLayout>
     </FrameLayout>
 
@@ -86,7 +90,7 @@
                 android:gravity="center"
                 android:text="     客户"
                 android:textColor="@color/white"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tv_finance_work"
@@ -110,7 +114,7 @@
                 android:gravity="center"
                 android:text="     其他"
                 android:textColor="@color/colorPrimary"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
 
         </LinearLayout>

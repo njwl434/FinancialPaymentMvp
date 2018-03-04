@@ -4,6 +4,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.wl.caiwushoukuan.R;
 import com.wl.caiwushoukuan.bean.TestInfo;
+import com.wl.caiwushoukuan.ui.MainActivity;
 
 /**
  * @describe: FinancialPaymentMvp
@@ -12,14 +13,14 @@ import com.wl.caiwushoukuan.bean.TestInfo;
  * @mailbox: 1034905058@qq.com
  */
 
-public class WorkAdapter extends BaseQuickAdapter<TestInfo, BaseViewHolder> {
+public class WorkAdapter extends BaseQuickAdapter<MainActivity.Zone, BaseViewHolder> {
     public WorkAdapter() {
         super(R.layout.item_work, null);
     }
     @Override
-    protected void convert(BaseViewHolder helper, TestInfo item) {
+    protected void convert(BaseViewHolder helper, MainActivity.Zone item) {
         helper.setText(R.id.mTvName, item.getName());
-        helper.setImageResource(R.id.mIvImg,item.getImg());
+        helper.setImageResource(R.id.mIvImg,item.getImgSrc());
 
     }
 }
