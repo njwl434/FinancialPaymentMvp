@@ -88,7 +88,7 @@
             android:paddingTop="10dip"
             android:visibility="visible">
 
-            <com.wl.wllibrary.view.NumberProgressBar
+            <com.saileikeji.wllibrary.view.NumberProgressBar
                 android:id="@+id/dialog_progress_pb_progressbar"
                 style="@style/NumberProgressBar_Beauty_Red" />
         </LinearLayout>

@@ -34,6 +34,7 @@
         <attr name="leftSrc" format="reference|color" />
         <attr name="centerSrc" format="reference|color" />
         <attr name="leftText" format="string" />
+        <attr name="leftSrca" format="reference|color" />
         <attr name="rightTextColor" format="color" />
         <attr name="rightSrc" format="reference|color" />
         <attr name="rightText" format="string" />

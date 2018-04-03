@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    >
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_marginLeft="@dimen/item_padding"
+      android:layout_marginTop="@dimen/dp_10"
+      android:layout_marginBottom="@dimen/dp_10"
+      >
+      <TextView
+          android:id="@+id/mTvTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="爱心社团"
+          android:textSize="18sp"
+          android:textColor="@color/text_black"
+          android:textStyle="bold"
+          />
+      <TextView
+          android:id="@+id/mTvMessage"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="观光旅行"
+          android:textSize="12sp"
+          android:textColor="@color/text_grayb"
+          android:layout_marginTop="5dp"
+          />
+  </LinearLayout>
+    <ImageView
+        android:id="@+id/mImgtitle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_zhanwei"
+        android:layout_marginRight="@dimen/item_padding"
+        android:layout_marginLeft="10dp"
+        />
+</LinearLayout>

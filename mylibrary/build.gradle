@@ -4,7 +4,7 @@ android {
     buildToolsVersion '26.0.1'
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -30,6 +30,8 @@ dependencies {
 //    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile project(':rxandroid')
     compile 'com.github.hss01248:DialogUtil:1.1.6'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.3'//没有使用特殊Header，可以不加这行
 
 //    compile 'com.jayfeng:lesscode-core:1.0'
 

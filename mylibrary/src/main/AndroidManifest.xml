@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.wl.wllibrary">
+    package="com.saileikeji.wllibrary">
 
     <application
         android:allowBackup="true"

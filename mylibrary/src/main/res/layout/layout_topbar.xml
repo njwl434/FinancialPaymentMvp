@@ -57,7 +57,15 @@
             android:layout_toRightOf="@+id/topbar_iv_left"
             android:text=""
             android:textColor="@color/white" />
-
+        <ImageView
+            android:id="@+id/topbar_img_left"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/topbar_iv_left"
+            android:layout_marginLeft="10dp"
+ />
         <LinearLayout
             android:id="@+id/layoutRight"
             android:layout_width="wrap_content"

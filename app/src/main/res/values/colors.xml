@@ -3,4 +3,33 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <!-- TabLayout -->
+    <color name="tab_indicator">#d6d6d6</color>
+    <color name="tab_tv_normal">#999999</color>
+    <color name="tab_tv_selected">#45c01a</color>
+    <color name="tab_divbian">#b2b2b2</color>
+    <color name="zitihui">#6b6b6b</color>
+    <color name="juse">#FD8624</color>
+    <color name="tab_gray">#666666</color>
+    <!-- 字体颜色-->
+    <color name="transparent">#00000000</color><!-- 透明色 -->
+    <color name="text_gray">#707889</color>
+    <color name="text_graya">#778FBF</color>
+    <color name="text_grayb">#999999</color>
+    <color name="text_gray33">#333333</color>
+    <color name="text_gray22">#222222</color>
+    <color name="text_gray66">#666666</color>
+    <color name="text_gray77">#777777</color>
+    <color name="text_graycc">#cccccc</color>
+    <color name="text_gray2a">#2A2A2A</color>
+    <color name="text_red">#FF2B2B</color>
+    <color name="text_green">#0AA03F</color>
+    <color name="text_orange">#E7B448</color>
+    <color name="text_shenorange">#F5A623</color>
+    <color name="text_blue">#172D51</color>
+    <color name="text_redd00">#D0021B</color>
+    <color name="lay_blue">#229FE6</color>
+
+    <color name="line_f5">#f2f2f2</color>
+    <color name="line_f5a">#f5f5f5</color>
 </resources>

@@ -7,11 +7,13 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <com.wl.wllibrary.view.loadingview.AVLoadingIndicatorView
+    <com.saileikeji.wllibrary.view.loadingview.AVLoadingIndicatorView
         android:id="@+id/indicator"
         style="@style/AVLoadingIndicatorView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:indicatorColor="@color/base_color"
+        android:visibility="gone"
         app:indicatorName="BallSpinFadeLoaderIndicator" />
+
 </LinearLayout>

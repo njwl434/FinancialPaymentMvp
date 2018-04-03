@@ -23,7 +23,7 @@
             android:text="请输入阿拉丁网交易密码"
             android:textColor="#000000"
             android:textSize="14sp"/>
-        <com.wl.wllibrary.view.PswView
+        <com.saileikeji.wllibrary.view.PswView
             android:id="@+id/pswView"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"

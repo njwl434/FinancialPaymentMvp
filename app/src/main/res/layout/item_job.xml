@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="120dp">
+    <ImageView
+        android:id="@+id/mIvImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_zhanwei"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/item_padding"
+        android:layout_centerVertical="true"
+        />
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_centerVertical="true"
+
+       >
+       <TextView
+           android:id="@+id/mTvTitle"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="为什么每次都这队友 哎发丝了"
+           android:textColor="@color/text_black"
+           android:textSize="15sp"
+           android:textStyle="bold"
+           android:layout_marginLeft="@dimen/item_padding"
+
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="为什么每次都这队友 哎发丝了"
+           android:textColor="@color/text_gray77"
+           android:textSize="12sp"
+           android:layout_marginLeft="@dimen/item_padding"
+           android:layout_marginTop="5dp"
+           />
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginLeft="@dimen/item_padding"
+           >
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="高山乐意"
+               android:textColor="@color/text_gray77"
+               android:textSize="12sp"
+               android:layout_marginTop="5dp"
+               />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="11月27日"
+               android:textColor="@color/text_gray77"
+               android:textSize="12sp"
+               android:layout_marginTop="5dp"
+               android:layout_marginLeft="@dimen/dp_10"
+               />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="11:04"
+               android:textColor="@color/text_gray77"
+               android:textSize="12sp"
+               android:layout_marginTop="5dp"
+               android:layout_marginLeft="@dimen/dp_10"
+               />
+       </LinearLayout>
+   </LinearLayout>
+
+</RelativeLayout>

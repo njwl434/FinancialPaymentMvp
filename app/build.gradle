@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.wl.caiwushoukuan"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -27,4 +27,20 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile project(':mylibrary')
+    compile('com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30') {
+        exclude group: 'com.android.support'
+    }
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.jakewharton:butterknife:7.0.0'
+    compile 'me.majiajie:pager-bottom-tab-strip:2.2.5'
+    //轮播图
+    compile 'com.jude:rollviewpager:1.4.6'
+    compile 'com.just.agentweb:agentweb:2.0.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:percent:25.2.0'
+    compile 'com.github.shts:TriangleLabelView:1.1.2'
+    compile 'com.github.markzhai:blockcanary-android:1.5.0'
+
+    compile 'com.zhy:percent-support-extends:1.1.1'
 }

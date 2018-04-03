@@ -42,7 +42,7 @@
         android:gravity="center"
         android:orientation="vertical" >
 
-        <com.wl.wllibrary.unlock.gesture.widget.LockIndicator
+        <com.saileikeji.wllibrary.unlock.gesture.widget.LockIndicator
             android:id="@+id/lock_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
