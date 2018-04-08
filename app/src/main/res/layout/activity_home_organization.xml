@@ -3,7 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include layout="@layout/include_head" />
-    <include layout="@layout/include_thick_line" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -20,10 +19,11 @@
             android:gravity="center"
             >
             <TextView
+                android:id="@+id/a_tv_typepaixu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="类型排序"
-                android:textColor="@color/text_grayb"
+                android:textColor="@color/lay_blue"
                 android:textSize="15sp"
 
                 />
@@ -37,10 +37,11 @@
             android:gravity="center"
             >
             <TextView
+                android:id="@+id/a_tv_fujinpaixu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="附近排序"
-                android:textColor="@color/text_grayb"
+                android:textColor="@color/text_gray33"
                 android:textSize="15sp"
 
                 />
@@ -54,10 +55,11 @@
             android:gravity="center"
             >
             <TextView
+                android:id="@+id/a_tv_zhinengpaixu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="智能排序"
-                android:textColor="@color/text_grayb"
+                android:textColor="@color/text_gray33"
                 android:textSize="15sp"
 
                 />

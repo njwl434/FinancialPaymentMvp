@@ -56,7 +56,7 @@
                         android:layout_height="wrap_content"
                         android:text="最新统计"
                         android:textColor="@color/text_black"
-                        android:textSize="15sp"
+                        android:textSize="8sp"
                         android:layout_marginLeft="@dimen/item_padding"
                         />
                     <LinearLayout
@@ -70,7 +70,7 @@
                             android:layout_height="wrap_content"
                             android:text="4.235机构"
                             android:textColor="@color/text_black"
-                            android:textSize="15sp"
+                            android:textSize="8sp"
                             />
                     </LinearLayout>
                     <LinearLayout
@@ -84,7 +84,7 @@
                             android:layout_height="wrap_content"
                             android:text="5415家教"
                             android:textColor="@color/text_black"
-                            android:textSize="15sp"
+                            android:textSize="8sp"
                             />
                     </LinearLayout>
                     <LinearLayout
@@ -98,7 +98,7 @@
                             android:layout_height="wrap_content"
                             android:text="12.5415学员"
                             android:textColor="@color/text_black"
-                            android:textSize="15sp"
+                            android:textSize="8sp"
                             />
                     </LinearLayout>
                 </LinearLayout>
@@ -113,7 +113,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="推荐课程"
-                        android:textSize="15sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="12dp"
@@ -123,7 +123,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="附近课程"
-                        android:textSize="15sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="12dp"
@@ -138,16 +138,18 @@
                         android:layout_centerVertical="true"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="@dimen/item_padding"
+                        android:visibility="gone"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="更多"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_gray77"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_graycf"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="12dp"
                         android:layout_toLeftOf="@+id/mIvImghome"
+                        android:layout_alignParentRight="true"
                         />
 
                 </RelativeLayout>
@@ -199,8 +201,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="更多"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_gray77"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_graycf"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="12dp"
                         android:layout_toLeftOf="@+id/mIvImgahome"
@@ -225,11 +227,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="热帖推荐"
-                        android:textSize="15sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="12dp"
-                        android:textColor="@color/text_gray22"
+                        android:textColor="@color/text_gray33"
                         />
                     <ImageView
                         android:id="@+id/mIvImgbhome"
@@ -244,8 +246,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="更多"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_gray77"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_graycf"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="12dp"
                         android:layout_toLeftOf="@+id/mIvImgbhome"
@@ -269,11 +271,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="推荐圈子"
-                        android:textSize="15sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="12dp"
-                        android:textColor="@color/text_gray22"
+                        android:textColor="@color/text_gray33"
                         />
                     <ImageView
                         android:id="@+id/mIvImgchome"
@@ -288,8 +290,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="更多"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_gray77"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_graycf"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="12dp"
                         android:layout_toLeftOf="@+id/mIvImgchome"
@@ -304,8 +306,9 @@
                     android:numColumns="4"></com.saileikeji.ebangren.widgit.MyGridView>
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:scaleType="centerCrop"
+                    android:layout_height="86dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_zhanwei"
                     />
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -317,11 +320,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="活动推荐"
-                        android:textSize="15sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="12dp"
-                        android:textColor="@color/text_gray22"
+                        android:textColor="@color/text_gray33"
                         />
                     <ImageView
                         android:id="@+id/mIvImgdhome"
@@ -336,8 +339,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="更多"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_gray77"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_graycf"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="12dp"
                         android:layout_toLeftOf="@+id/mIvImgdhome"

@@ -150,9 +150,6 @@ public class HomeFragment extends BaseFragment {
             in.setName("测试" + 1);
             testInfoList.add(in);
         }
-//        RecycleaHome.post(new Runnable() {
-//            @Override
-//            public void run() {
                 mList.clear();
                 for (int i = 0; i < titles.length; i++) {
                     QuanziBean bean=new QuanziBean();
@@ -162,11 +159,6 @@ public class HomeFragment extends BaseFragment {
                 }
                 //上面的grid
                 RecycleaHome.setAdapter(new GridViewAdapter(getContext(), mList));
-//            }
-//        });
-//        Recycleaquanzi.post(new Runnable() {
-//            @Override
-//            public void run() {
                 mquanziList.clear();
                 for (int i = 0; i < titles1.length; i++) {
                     QuanziBean bean=new QuanziBean();
@@ -176,18 +168,12 @@ public class HomeFragment extends BaseFragment {
                 }
                 //推荐圈子
                 Recycleaquanzi.setAdapter(new GridViewAdapter(getContext(), mquanziList));
-//            }
-//        });
-//        RecyclebHome.post(new Runnable() {
-//            @Override
-//            public void run() {
+
                 //推荐课程
                 if (adaptebase==null) {
                     adaptebase = new CourseBaseAdapte();
                 }
                 GridLayoutManager gridLayoutManagera = new GridLayoutManager(getActivity(), 2);
-//        gridLayoutManagera.setSmoothScrollbarEnabled(true);
-//        gridLayoutManagera.setAutoMeasureEnabled(true);
                 RecyclebHome.setHasFixedSize(true);
                 RecyclebHome.setNestedScrollingEnabled(false);
                 RecyclebHome.setLayoutManager(gridLayoutManagera);
@@ -200,18 +186,12 @@ public class HomeFragment extends BaseFragment {
                         getActivity().finish();
                     }
                 });
-//            }
-//        });
-//        RecyclebJigou.post(new Runnable() {
-//            @Override
-//            public void run() {
+
                 //推荐机构
                 if (adaptebaseb==null) {
                     adaptebaseb = new CourseBaseAdapte();
                 }
                 GridLayoutManager gridLayoutManagerb = new GridLayoutManager(getActivity(), 2);
-//        gridLayoutManagerb.setSmoothScrollbarEnabled(true);
-//        gridLayoutManagerb.setAutoMeasureEnabled(true);
                 RecyclebJigou.setHasFixedSize(true);
                 RecyclebJigou.setNestedScrollingEnabled(false);
                 RecyclebJigou.setLayoutManager(gridLayoutManagerb);
@@ -223,11 +203,6 @@ public class HomeFragment extends BaseFragment {
                         startActivity(new Intent(getContext(),OrganizationActivity.class));
                     }
                 });
-//            }
-//        });
-//        RecyclebTuijian.post(new Runnable() {
-//            @Override
-//            public void run() {
                 //热帖推荐
                 if (adaptertuijian==null) {
                     adaptertuijian = new TuijianBaseAdapter();
@@ -240,11 +215,7 @@ public class HomeFragment extends BaseFragment {
                 RecyclebTuijian.setLayoutManager(lin);
                 RecyclebTuijian.setAdapter(adaptertuijian);
                 adaptertuijian.setNewData(testInfoList);
-//            }
-//        });
-//        RecyclebHuodong.post(new Runnable() {
-//            @Override
-//            public void run() {
+
                 //活动推荐
                 if (adaptertuijiana==null){
                     adaptertuijiana = new TuijianBaseAdapter();

@@ -52,8 +52,17 @@ public class OrganizationFragment extends BaseFragment {
     @Bind(R.id.mRecycleor)
     RecyclerView mRecycleor;
     OrganizationAdapter adapter;
-    List<TestInfo> testInfoList=new ArrayList<>();
+    List<TestInfo> testInfoList = new ArrayList<>();
     View rootView;
+    @Bind(R.id.mlaylout)
+    LinearLayout mlaylout;
+    @Bind(R.id.a_tv_typepaixu)
+    TextView aTvTypepaixu;
+    @Bind(R.id.a_tv_fujinpaixu)
+    TextView aTvFujinpaixu;
+    @Bind(R.id.a_tv_zhinengpaixu)
+    TextView aTvZhinengpaixu;
+
     @Override
     protected int provideContentViewId() {
         return R.layout.activity_home_organization;
@@ -61,7 +70,7 @@ public class OrganizationFragment extends BaseFragment {
 
     @Override
     public void initView(View rootView) {
-        this.rootView=rootView;
+        this.rootView = rootView;
     }
 
     public static OrganizationFragment newInstance(String content) {
@@ -71,6 +80,7 @@ public class OrganizationFragment extends BaseFragment {
         fragment.setArguments(args);
         return fragment;
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // TODO: inflate a fragment view
@@ -82,7 +92,7 @@ public class OrganizationFragment extends BaseFragment {
             in.setName("测试" + 1);
             testInfoList.add(in);
         }
-        adapter=new OrganizationAdapter();
+        adapter = new OrganizationAdapter();
         mRecycleor.setLayoutManager(new LinearLayoutManager(mRecycleor.getContext()));
         mRecycleor.setAdapter(adapter);
         adapter.setNewData(testInfoList);
@@ -102,12 +112,21 @@ public class OrganizationFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.mlaytypesort:
+                aTvTypepaixu.setTextColor(getActivity().getResources().getColor(R.color.lay_blue));
+                aTvFujinpaixu.setTextColor(getActivity().getResources().getColor(R.color.text_gray33));
+                aTvZhinengpaixu.setTextColor(getActivity().getResources().getColor(R.color.text_gray33));
                 break;
             case R.id.mlayNearbysort:
+                aTvTypepaixu.setTextColor(getActivity().getResources().getColor(R.color.text_gray33));
+                aTvFujinpaixu.setTextColor(getActivity().getResources().getColor(R.color.lay_blue));
+                aTvZhinengpaixu.setTextColor(getActivity().getResources().getColor(R.color.text_gray33));
                 break;
             case R.id.mlayCapacitybysort:
+                aTvTypepaixu.setTextColor(getActivity().getResources().getColor(R.color.text_gray33));
+                aTvFujinpaixu.setTextColor(getActivity().getResources().getColor(R.color.text_gray33));
+                aTvZhinengpaixu.setTextColor(getActivity().getResources().getColor(R.color.lay_blue));
                 break;
-                default:
+            default:
         }
     }
 }

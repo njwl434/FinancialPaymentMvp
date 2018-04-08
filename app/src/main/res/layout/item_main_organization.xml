@@ -13,10 +13,10 @@
         >
         <ImageView
             android:id="@+id/mImglist"
-            android:layout_width="110dp"
+            android:layout_width="132dp"
             android:layout_height="90dp"
             android:src="@mipmap/ic_zhanwei"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="20dp"
@@ -24,12 +24,13 @@
             />
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp">
+            android:layout_height="110dp"
+            android:layout_marginLeft="14dp"
+            >
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="12dp"
                 >
                 <TextView
                     android:id="@+id/tvacommunity"
@@ -38,7 +39,6 @@
                     android:text="测试测试测试测试测试测试测试"
                     android:textColor="@color/text_gray33"
                     android:textSize="15sp"
-                    android:textStyle="bold"
                     android:maxLength="20"
                     android:ellipsize="end"
                     />
@@ -48,22 +48,21 @@
                     android:layout_height="wrap_content"
                     android:text="英语 美术 数学"
                     android:layout_below="@+id/tvacommunity"
-                    android:textSize="13sp"
-                    android:textColor="@color/text_gray77"
-                    android:layout_marginLeft="@dimen/dp_10"
+                    android:textSize="9sp"
+                    android:layout_marginTop="11dp"
+                    android:textColor="@color/text_grayb"
                     />
                 <com.saileikeji.ebangren.widgit.RatingBar
                     android:id="@+id/rate"
-                    android:paddingTop="5dp"
+                    android:paddingTop="11dp"
                     android:layout_below="@+id/tvaShu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="5dp"
                     app:starCount="5"
                     app:starEmpty="@mipmap/unstar"
                     app:starFill="@mipmap/star"
                     app:starHalf="@mipmap/star"
-                    app:starImageSize="15dp"
+                    app:starImageSize="10dp"
                     app:starPadding="5dp"
                     app:starStep="0"
                     app:stepSize="Half"
@@ -72,7 +71,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:layout_alignParentBottom="true"
 
                 >
@@ -85,6 +84,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
                     android:gravity="center"
+
                     />
 
                 <TextView
@@ -92,8 +92,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="高新区"
-                    android:textColor="@color/text_gray77"
-                    android:textSize="12sp"
+                    android:textColor="@color/text_grayb"
+                    android:textSize="7sp"
                     android:layout_toRightOf="@+id/mIvImgor"
                     android:layout_alignBottom="@+id/mIvImgor"
                     android:layout_marginLeft="5dp"

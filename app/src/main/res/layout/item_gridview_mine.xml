@@ -8,12 +8,12 @@
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
         android:layout_marginRight="5dp"
         android:src="@mipmap/ic_zhanwei"
         android:layout_centerHorizontal="true"
-        android:scaleType="centerCrop"
+        android:scaleType="fitXY"
         />
 
     <TextView
@@ -22,10 +22,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/image"
         android:text="hasdkjsahdksajdka"
-        android:textSize="14sp"
-        android:textColor="@color/text_black"
+        android:textSize="11sp"
+        android:textColor="@color/text_gray33"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="6dp"
         />
 
 

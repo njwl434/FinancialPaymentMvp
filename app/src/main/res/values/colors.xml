@@ -11,8 +11,8 @@
     <color name="zitihui">#6b6b6b</color>
     <color name="juse">#FD8624</color>
     <color name="tab_gray">#666666</color>
-    <!-- ×ÖÌåÑÕÉ«-->
-    <color name="transparent">#00000000</color><!-- Í¸Ã÷É« -->
+    <!-- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«-->
+    <color name="transparent">#00000000</color><!-- Í¸ï¿½ï¿½É« -->
     <color name="text_gray">#707889</color>
     <color name="text_graya">#778FBF</color>
     <color name="text_grayb">#999999</color>
@@ -20,6 +20,8 @@
     <color name="text_gray22">#222222</color>
     <color name="text_gray66">#666666</color>
     <color name="text_gray77">#777777</color>
+    <color name="text_graycf">#D3D0CF</color>
+    <color name="gray7">#777777</color>
     <color name="text_graycc">#cccccc</color>
     <color name="text_gray2a">#2A2A2A</color>
     <color name="text_red">#FF2B2B</color>
@@ -28,7 +30,7 @@
     <color name="text_shenorange">#F5A623</color>
     <color name="text_blue">#172D51</color>
     <color name="text_redd00">#D0021B</color>
-    <color name="lay_blue">#229FE6</color>
+    <color name="lay_blue">#1296DB</color>
 
     <color name="line_f5">#f2f2f2</color>
     <color name="line_f5a">#f5f5f5</color>

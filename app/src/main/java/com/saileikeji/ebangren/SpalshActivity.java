@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.saileikeji.ebangren.ui.MainActivity;
 import com.saileikeji.ebangren.ui.MainNavigationpageActivity;
 import com.saileikeji.ebangren.ui.base.BaseActivity;
+import com.saileikeji.ebangren.ui.login.LoginActivity;
 import com.saileikeji.ebangren.widgit.SPConstant;
 import com.saileikeji.wllibrary.util.SharedPreferenceUtil;
 
@@ -81,16 +82,16 @@ import butterknife.ButterKnife;
         if(isfer){
             //第一次进入跳转
             editor.putBoolean("isfer", false).commit();
-            Intent in=new Intent(SpalshActivity.this,MainActivity.class);
+            Intent in=new Intent(SpalshActivity.this,LoginActivity.class);
             startActivity(in);
             finish();
         }else{
             //第二次进入跳转
             if (TextUtils.isEmpty(userid)) {
-                startActivity(new Intent(SpalshActivity.this,MainActivity.class));
+                startActivity(new Intent(SpalshActivity.this,LoginActivity.class));
                 finish();
             }else {
-                startActivity(new Intent(SpalshActivity.this,MainActivity.class));
+                startActivity(new Intent(SpalshActivity.this,LoginActivity.class));
                 finish();
             }
         }

@@ -46,26 +46,26 @@ public abstract class BaseFragment extends Fragment {
 ////        apiManager = HttpUtil.getInstance(ApiManager.BASE_URL).getApiManager();
         context = getActivity();
     }
-
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-                //子类不再需要设置布局ID，也不再需要使用ButterKnife.bind()
-        if (rootView==null) {
-            rootView = inflater.inflate(provideContentViewId(), container, false);
-        }
-        initView(rootView);
-        return rootView;
-    }
-    //    @Nullable
+//
+//    @Nullable
 //    @Override
 //    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        //子类不再需要设置布局ID，也不再需要使用ButterKnife.bind()
-//        View rootView = inflater.inflate(provideContentViewId(), container, false);
-//        ButterKnife.bind(this, rootView);
+//                //子类不再需要设置布局ID，也不再需要使用ButterKnife.bind()
+//        if (rootView==null) {
+//            rootView = inflater.inflate(provideContentViewId(), container, false);
+//        }
 //        initView(rootView);
 //        return rootView;
 //    }
+    //    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        //子类不再需要设置布局ID，也不再需要使用ButterKnife.bind()
+        View rootView = inflater.inflate(provideContentViewId(), container, false);
+        ButterKnife.bind(this, rootView);
+        initView(rootView);
+        return rootView;
+    }
 
     //得到当前界面的布局文件id(由子类实现)
     protected abstract int provideContentViewId();
