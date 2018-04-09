@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -26,18 +27,17 @@ import com.saileikeji.ebangren.adapter.TuijianBaseAdapter;
 import com.saileikeji.ebangren.bean.QuanziBean;
 import com.saileikeji.ebangren.bean.TestInfo;
 import com.saileikeji.ebangren.ui.CourseActivity;
+import com.saileikeji.ebangren.ui.MoreCourseActivity;
 import com.saileikeji.ebangren.ui.OrganizationActivity;
 import com.saileikeji.ebangren.ui.base.BaseFragment;
 import com.saileikeji.ebangren.widgit.MyGridView;
-import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * @describe: Ebangren
@@ -94,6 +94,20 @@ public class HomeFragment extends BaseFragment {
     CourseBaseAdapte adaptebase, adaptebaseb;
     @Bind(R.id.Recycleaquanzi)
     MyGridView Recycleaquanzi;
+    @Bind(R.id.mlaylout)
+    LinearLayout mlaylout;
+    @Bind(R.id.a_tv_morecourse)
+    TextView aTvMorecourse;
+    @Bind(R.id.a_tv_moreorganization)
+    TextView aTvMoreorganization;
+    @Bind(R.id.a_tv_moreinvitation)
+    TextView aTvMoreinvitation;
+    @Bind(R.id.a_tv_morecircle)
+    TextView aTvMorecircle;
+    @Bind(R.id.a_tv_moreactivity)
+    TextView aTvMoreactivity;
+    @Bind(R.id.NestScroll)
+    NestedScrollView NestScroll;
     private int[] images = {R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei};
     private String[] titles = {"美妆", "数码", "电器", "男装", "女装", "美妆", "数码", "电器", "男装", "女装", "美妆", "数码", "电器", "男装", "女装",};
     private int[] images1 = {R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei, R.mipmap.ic_zhanwei};
@@ -101,9 +115,10 @@ public class HomeFragment extends BaseFragment {
     private List<TestInfo> testInfoList = new ArrayList<>();
     TuijianBaseAdapter adaptertuijian;
     TuijianBaseAdapter adaptertuijiana;
-    List<QuanziBean> mList=new ArrayList<>();
-    List<QuanziBean> mquanziList=new ArrayList<>();
+    List<QuanziBean> mList = new ArrayList<>();
+    List<QuanziBean> mquanziList = new ArrayList<>();
     View rootView;
+
     public static HomeFragment newInstance(String content) {
         Bundle args = new Bundle();
         args.putString(ARG_C, content);
@@ -111,6 +126,7 @@ public class HomeFragment extends BaseFragment {
         fragment.setArguments(args);
         return fragment;
     }
+
     @Override
     protected int provideContentViewId() {
         return R.layout.fragment_main_home;
@@ -120,13 +136,12 @@ public class HomeFragment extends BaseFragment {
     public void initView(View rootView) {
 
 
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // TODO: inflate a fragment view
-         rootView = super.onCreateView(inflater, container, savedInstanceState);
+        rootView = super.onCreateView(inflater, container, savedInstanceState);
         ButterKnife.bind(this, rootView);
 
         //设置播放时间间隔
@@ -150,84 +165,84 @@ public class HomeFragment extends BaseFragment {
             in.setName("测试" + 1);
             testInfoList.add(in);
         }
-                mList.clear();
-                for (int i = 0; i < titles.length; i++) {
-                    QuanziBean bean=new QuanziBean();
-                    bean.setImages(images[i]);
-                    bean.setTitles(titles[i]);
-                    mList.add(bean);
-                }
-                //上面的grid
-                RecycleaHome.setAdapter(new GridViewAdapter(getContext(), mList));
-                mquanziList.clear();
-                for (int i = 0; i < titles1.length; i++) {
-                    QuanziBean bean=new QuanziBean();
-                    bean.setImages(images1[i]);
-                    bean.setTitles(titles1[i]);
-                    mquanziList.add(bean);
-                }
-                //推荐圈子
-                Recycleaquanzi.setAdapter(new GridViewAdapter(getContext(), mquanziList));
+        mList.clear();
+        for (int i = 0; i < titles.length; i++) {
+            QuanziBean bean = new QuanziBean();
+            bean.setImages(images[i]);
+            bean.setTitles(titles[i]);
+            mList.add(bean);
+        }
+        //上面的grid
+        RecycleaHome.setAdapter(new GridViewAdapter(getContext(), mList));
+        mquanziList.clear();
+        for (int i = 0; i < titles1.length; i++) {
+            QuanziBean bean = new QuanziBean();
+            bean.setImages(images1[i]);
+            bean.setTitles(titles1[i]);
+            mquanziList.add(bean);
+        }
+        //推荐圈子
+        Recycleaquanzi.setAdapter(new GridViewAdapter(getContext(), mquanziList));
 
-                //推荐课程
-                if (adaptebase==null) {
-                    adaptebase = new CourseBaseAdapte();
-                }
-                GridLayoutManager gridLayoutManagera = new GridLayoutManager(getActivity(), 2);
-                RecyclebHome.setHasFixedSize(true);
-                RecyclebHome.setNestedScrollingEnabled(false);
-                RecyclebHome.setLayoutManager(gridLayoutManagera);
-                RecyclebHome.setAdapter(adaptebase);
-                adaptebase.setNewData(testInfoList);
-                adaptebase.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                        startActivity(new Intent(getContext(),CourseActivity.class));
-                        getActivity().finish();
-                    }
-                });
+        //推荐课程
+        if (adaptebase == null) {
+            adaptebase = new CourseBaseAdapte();
+        }
+        GridLayoutManager gridLayoutManagera = new GridLayoutManager(getActivity(), 2);
+        RecyclebHome.setHasFixedSize(true);
+        RecyclebHome.setNestedScrollingEnabled(false);
+        RecyclebHome.setLayoutManager(gridLayoutManagera);
+        RecyclebHome.setAdapter(adaptebase);
+        adaptebase.setNewData(testInfoList);
+        adaptebase.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(new Intent(getContext(), CourseActivity.class));
+                getActivity().finish();
+            }
+        });
 
-                //推荐机构
-                if (adaptebaseb==null) {
-                    adaptebaseb = new CourseBaseAdapte();
-                }
-                GridLayoutManager gridLayoutManagerb = new GridLayoutManager(getActivity(), 2);
-                RecyclebJigou.setHasFixedSize(true);
-                RecyclebJigou.setNestedScrollingEnabled(false);
-                RecyclebJigou.setLayoutManager(gridLayoutManagerb);
-                RecyclebJigou.setAdapter(adaptebaseb);
-                adaptebaseb.setNewData(testInfoList);
-                adaptebaseb.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                        startActivity(new Intent(getContext(),OrganizationActivity.class));
-                    }
-                });
-                //热帖推荐
-                if (adaptertuijian==null) {
-                    adaptertuijian = new TuijianBaseAdapter();
-                }
-                LinearLayoutManager lin  = new LinearLayoutManager(RecyclebTuijian.getContext());
+        //推荐机构
+        if (adaptebaseb == null) {
+            adaptebaseb = new CourseBaseAdapte();
+        }
+        GridLayoutManager gridLayoutManagerb = new GridLayoutManager(getActivity(), 2);
+        RecyclebJigou.setHasFixedSize(true);
+        RecyclebJigou.setNestedScrollingEnabled(false);
+        RecyclebJigou.setLayoutManager(gridLayoutManagerb);
+        RecyclebJigou.setAdapter(adaptebaseb);
+        adaptebaseb.setNewData(testInfoList);
+        adaptebaseb.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(new Intent(getContext(), OrganizationActivity.class));
+            }
+        });
+        //热帖推荐
+        if (adaptertuijian == null) {
+            adaptertuijian = new TuijianBaseAdapter();
+        }
+        LinearLayoutManager lin = new LinearLayoutManager(RecyclebTuijian.getContext());
 //        lin.setSmoothScrollbarEnabled(true);
 //        lin.setAutoMeasureEnabled(true);
-                RecyclebTuijian.setHasFixedSize(true);
-                RecyclebTuijian.setNestedScrollingEnabled(false);
-                RecyclebTuijian.setLayoutManager(lin);
-                RecyclebTuijian.setAdapter(adaptertuijian);
-                adaptertuijian.setNewData(testInfoList);
+        RecyclebTuijian.setHasFixedSize(true);
+        RecyclebTuijian.setNestedScrollingEnabled(false);
+        RecyclebTuijian.setLayoutManager(lin);
+        RecyclebTuijian.setAdapter(adaptertuijian);
+        adaptertuijian.setNewData(testInfoList);
 
-                //活动推荐
-                if (adaptertuijiana==null){
-                    adaptertuijiana = new TuijianBaseAdapter();
-                }
-                LinearLayoutManager lina  = new LinearLayoutManager(RecyclebTuijian.getContext());
+        //活动推荐
+        if (adaptertuijiana == null) {
+            adaptertuijiana = new TuijianBaseAdapter();
+        }
+        LinearLayoutManager lina = new LinearLayoutManager(RecyclebTuijian.getContext());
 //        lina.setSmoothScrollbarEnabled(true);
 //        lina.setAutoMeasureEnabled(true);
-                RecyclebHuodong.setHasFixedSize(true);
-                RecyclebHuodong.setNestedScrollingEnabled(false);
-                RecyclebHuodong.setLayoutManager(lina);
-                RecyclebHuodong.setAdapter(adaptertuijiana);
-                adaptertuijiana.setNewData(testInfoList);
+        RecyclebHuodong.setHasFixedSize(true);
+        RecyclebHuodong.setNestedScrollingEnabled(false);
+        RecyclebHuodong.setLayoutManager(lina);
+        RecyclebHuodong.setAdapter(adaptertuijiana);
+        adaptertuijiana.setNewData(testInfoList);
 //            }
 //        });
 
@@ -243,13 +258,32 @@ public class HomeFragment extends BaseFragment {
         ButterKnife.unbind(this);
     }
 
+    @OnClick({R.id.a_tv_morecourse, R.id.a_tv_moreorganization, R.id.a_tv_moreinvitation, R.id.a_tv_morecircle, R.id.a_tv_moreactivity})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.a_tv_morecourse:
+                startActivity(new Intent(getActivity(), MoreCourseActivity.class));
+                break;
+            case R.id.a_tv_moreorganization:
+                break;
+            case R.id.a_tv_moreinvitation:
+                break;
+            case R.id.a_tv_morecircle:
+                break;
+            case R.id.a_tv_moreactivity:
+                break;
+                default:
+        }
+    }
+
     private class TestNormalAdapter extends StaticPagerAdapter {
         ImageView view;
+
         @Override
-        public View getView(ViewGroup container,final int position) {
-                view = new ImageView(container.getContext());
-                view.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        public View getView(ViewGroup container, final int position) {
+            view = new ImageView(container.getContext());
+            view.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {

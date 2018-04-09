@@ -20,11 +20,17 @@
         <activity android:name="com.saileikeji.ebangren.ui.MainActivity" />
         <activity android:name="com.saileikeji.ebangren.ui.MainNavigationpageActivity" />
         <activity android:name="com.saileikeji.ebangren.ui.CourseActivity" />
+        <activity android:name="com.saileikeji.ebangren.ui.MoreCourseActivity" />
         <activity android:name="com.saileikeji.ebangren.ui.OrganizationActivity" />
+        <activity android:name="com.saileikeji.ebangren.ui.MoreOrganizationActivity" />
+        <activity android:name="com.saileikeji.ebangren.ui.CourseTypeActivity" />
+        <activity android:name="com.saileikeji.ebangren.ui.NotificationActivity" />
+
         <activity android:name="com.saileikeji.ebangren.ui.login.LoginActivity" />
         <activity android:name="com.saileikeji.ebangren.ui.login.ForgetPasswordActivity" />
         <activity android:name="com.saileikeji.ebangren.ui.login.LoginPasswordActivity" />
         <activity android:name="com.saileikeji.ebangren.ui.login.RegisterActivity" />
+
     </application>
 
 </manifest>
