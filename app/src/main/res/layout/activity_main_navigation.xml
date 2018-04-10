@@ -38,6 +38,7 @@
         android:layout_height="48dp"
         style="@style/CustomTab"
         app:tabGravity="fill"
+        android:background="@color/white"
         ></android.support.design.widget.TabLayout>
 
 

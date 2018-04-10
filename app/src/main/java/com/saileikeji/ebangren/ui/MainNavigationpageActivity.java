@@ -52,7 +52,7 @@ public class MainNavigationpageActivity extends BaseActivity {
     private final int[] TAB_TITLES = new int[]{R.string.tab_shouye, R.string.tab_jigou, R.string.tab_shequ, R.string.tab_jiajiao,R.string.tab_me
     };
     //Tab 图片
-    private final int[] TAB_IMGS = new int[]{R.drawable.ic_zhanwei, R.drawable.ic_zhanwei, R.drawable.ic_zhanwei, R.drawable.ic_zhanwei,R.drawable.ic_zhanwei};
+    private final int[] TAB_IMGS = new int[]{R.drawable.tab_homepage_selector, R.drawable.tab_orgenization_selector, R.drawable.tab_community_selector, R.drawable.tab_familyeducation_selector,R.drawable.tab_me_selector};
     //Fragment 数组
     private final Fragment[] TAB_FRAGMENTS = new Fragment[]{new HomeFragment(), new OrganizationFragment(), new CommunityFragment(), new FamilyEducationFrament(),new MeFragment()};
     //Tab 数目

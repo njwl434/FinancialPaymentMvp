@@ -13,8 +13,8 @@
     </style>
     <style name="CustomTab" parent="Widget.Design.TabLayout">
         <item name="tabIndicatorColor">@color/tab_indicator</item>
-        <item name="tabTextColor">@color/zitihui</item>
-        <item name="tabSelectedTextColor">@color/juse</item>
+        <item name="tabTextColor">@color/text_gray33</item>
+        <item name="tabSelectedTextColor">@color/lay_blue</item>
         <item name="tabBackground">@drawable/shape_tabwhite_line</item>
         <item name="tabIndicatorHeight">0dp</item>
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab.Custom</item>

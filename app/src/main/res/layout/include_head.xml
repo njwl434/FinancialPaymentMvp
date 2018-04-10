@@ -20,14 +20,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="郑州"
-        android:textSize="15sp"
+        android:textSize="12sp"
         android:textColor="@color/white"
-        android:layout_marginLeft="@dimen/item_padding"
+        android:layout_marginLeft="15dp"
         />
     <ImageView
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:src="@mipmap/ic_zhanwei"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/xiala"
         />
     </LinearLayout>
     <RelativeLayout
@@ -38,22 +39,20 @@
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/shap_bg_et"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
         android:orientation="horizontal"
         android:paddingLeft="14dp"
         android:paddingRight="14dp"
-        android:gravity="center"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="9dp"
         android:layout_toRightOf="@+id/mlaylout"
         >
 
         <ImageView
             android:id="@+id/ImageSearch"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/button_search" />
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/search" />
 
         <ImageView
             android:id="@+id/ImageSearchx"
@@ -61,7 +60,9 @@
             android:layout_height="20dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/close" />
+            android:src="@drawable/close"
+            android:visibility="gone"
+            />
 
         <TextView
             android:id="@+id/editSearch"
@@ -71,15 +72,17 @@
             android:layout_toLeftOf="@+id/ImageSearchx"
             android:layout_toRightOf="@+id/ImageSearch"
             android:background="@null"
+            android:textColorHint="#8B8B8B"
             android:hint="请输入老师/科目 年纪 特点"
-            android:textSize="14sp" />
+            android:layout_marginLeft="10dp"
+            android:textSize="10sp" />
 
     </RelativeLayout>
     <ImageView
         android:id="@+id/img"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:src="@mipmap/ic_zhanwei"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/xinxi"
         android:layout_alignParentRight="true"
         android:layout_marginRight="@dimen/item_padding"
         android:layout_centerVertical="true"
